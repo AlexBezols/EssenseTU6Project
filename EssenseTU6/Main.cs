@@ -703,9 +703,10 @@ namespace EssenseTU6
                 button10.Visible = true;
                 button3.Visible = false;
                 button2.Visible = false;
+                panel4.Visible = true;
                 panel2.Visible = false;
                 panel3.Visible = false;
-                panel4.Visible = true;
+                
 
             }
         }
@@ -819,14 +820,12 @@ namespace EssenseTU6
             
             if(jtag2.Connect(out jtag2) && sprintincheck == false)
             {
-                jtag2.SetMemory(0xC8A6F2CA, new byte[] { 0x00 });
-                jtag2.SetMemory(0xC8A6F2CB, new byte[] { 0x00 });
+                jtag2.SetMemory(offsets.iSprintInTimeCheytac, new byte[] { 0x00 , 0x00 });
                 sprintincheck = true;
             }
             else if(sprintincheck == true)
             {
-                jtag2.SetMemory(0xC8A6F2CA, new byte[] { 0x01 });
-                jtag2.SetMemory(0xC8A6F2CB, new byte[] { 0x2C });
+                jtag2.SetMemory(offsets.iSprintInTimeCheytac, new byte[] { 0x01 , 0x2C });
                 sprintincheck = false;
             }
 
@@ -837,14 +836,12 @@ namespace EssenseTU6
         {
             if (jtag2.Connect(out jtag2) && droptimecheck == false)
             {
-                jtag2.SetMemory(0xC8A6F2AA, new byte[] { 0x00 });
-                jtag2.SetMemory(0xC8A6F2AB, new byte[] { 0x00 });
+                jtag2.SetMemory(offsets.iDropTimeCheytac, new byte[] { 0x00 , 0x00 });
                 droptimecheck = true;
             }
             else if (droptimecheck == true)
             {
-                jtag2.SetMemory(0xC8A6F2AA, new byte[] { 0x04 });
-                jtag2.SetMemory(0xC8A6F2AB, new byte[] { 0x50 });
+                jtag2.SetMemory(offsets.iDropTimeCheytac, new byte[] { 0x04 , 0x50});
                 droptimecheck = false;
             }
         }
@@ -854,14 +851,12 @@ namespace EssenseTU6
         {
             if (jtag2.Connect(out jtag2) && instantshot == false)
             {
-                jtag2.SetMemory(0xC8A6F2AE, new byte[] { 0x00 });
-                jtag2.SetMemory(0xC8A6F2AF, new byte[] { 0x00 });
+                jtag2.SetMemory(offsets.iRaiseTimeCheytac, new byte[] { 0x00 , 0x00 });
                 instantshot = true;
             }
             else if (instantshot == true)
             {
-                jtag2.SetMemory(0xC8A6F2AE, new byte[] { 0x03 });
-                jtag2.SetMemory(0xC8A6F2AF, new byte[] { 0xE8 });
+                jtag2.SetMemory(offsets.iRaiseTimeCheytac, new byte[] { 0x03 , 0xE8 });
                 instantshot = false;
             }
         }
@@ -1011,14 +1006,12 @@ namespace EssenseTU6
         {
             if (jtag2.Connect(out jtag2) && barretadelia == false)
             {
-                jtag2.SetMemory(0xC8844952, new byte[] { 0x00 });
-                jtag2.SetMemory(0xC8844953, new byte[] { 0x00 });
+                jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x00 , 0x00 });
                 barretadelia = true;
             }
             else if (barretadelia == true)
             {
-                jtag2.SetMemory(0xC8844952, new byte[] { 0x01 });
-                jtag2.SetMemory(0xC8844953, new byte[] { 0x2C });
+                jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x01 , 0x2C });
                 barretadelia = false;
             }
         }
@@ -1028,14 +1021,12 @@ namespace EssenseTU6
         {
             if (jtag2.Connect(out jtag2) && barrettnac == false)
             {
-                jtag2.SetMemory(0xC8844932, new byte[] { 0x00 });
-                jtag2.SetMemory(0xC8844933, new byte[] { 0x00 });
+                jtag2.SetMemory(offsets.iDropTimeBarrett, new byte[] { 0x00 , 0x00 });
                 barrettnac = true;
             }
             else if (barrettnac == true)
             {
-                jtag2.SetMemory(0xC8844932, new byte[] { 0x02 });
-                jtag2.SetMemory(0xC8844933, new byte[] { 0xBB });
+                jtag2.SetMemory(offsets.iDropTimeBarrett, new byte[] { 0x02 , 0xBB });
                 barrettnac = false;
             }
         }
@@ -1045,14 +1036,64 @@ namespace EssenseTU6
         {
             if (jtag2.Connect(out jtag2) && barrettinstantshot == false)
             {
-                jtag2.SetMemory(0xC8844936, new byte[] { 0x00 , 0x00 });
+                jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x00 , 0x00 });
                 barrettinstantshot = true;
             }
             else if (barrettinstantshot == true)
             {
-                jtag2.SetMemory(0xC8844936, new byte[] { 0x03, 0xE8 });
+                jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x03, 0xE8 });
                 barrettinstantshot = false;
             }
+        }
+
+        public bool m21adelia = false;
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2) && m21adelia == false)
+            {
+                jtag2.SetMemory(offsets.iSprintInTimeM21, new byte[] { 0x00, 0x00 });
+                m21adelia = true;
+            }
+            else if (m21adelia == true)
+            {
+                jtag2.SetMemory(offsets.iSprintInTimeM21, new byte[] { 0x01, 0x2C });
+                m21adelia = false;
+            }
+        }
+
+        public bool m21nac = false;
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2) && m21nac == false)
+            {
+                jtag2.SetMemory(offsets.iDropTimeM21, new byte[] { 0x00, 0x00 });
+                m21nac = true;
+            }
+            else if (m21nac == true)
+            {
+                jtag2.SetMemory(offsets.iDropTimeM21, new byte[] { 0x02, 0x58 });
+                m21nac = false;
+            }
+        }
+
+        public bool m21instantshot = false;
+        private void checkBox13_CheckedChanged(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2) && m21instantshot == false)
+            {
+                jtag2.SetMemory(offsets.iRaiseTimeM21, new byte[] { 0x00, 0x00 });
+                m21instantshot = true;
+            }
+            else if (m21instantshot == true)
+            {
+                jtag2.SetMemory(offsets.iRaiseTimeM21, new byte[] { 0x03, 0xB5 });
+                m21instantshot = false;
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     

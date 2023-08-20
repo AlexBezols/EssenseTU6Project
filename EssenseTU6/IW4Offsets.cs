@@ -39,6 +39,9 @@ namespace EssenseTU6
         public UInt32 viewmodel_cheytac_thermal_ads_down = 0xC8B0CC5C;
         public UInt32 viewmodel_cheytac_thermal_ADS_up = 0xC8B0D458;
         public UInt32 viewmodel_cheytac_thermal_ADS_down = 0xC8B0D479;
+        public UInt32 iSprintInTimeCheytac = 0xC8A6F2CA;
+        public UInt32 iDropTimeCheytac = 0xC8A6F2AA;
+        public UInt32 iRaiseTimeCheytac = 0xC8A6F2AE;
         //barrett
         public UInt32 viewmodel_barrett_idle = 0xC8830D34;
         public UInt32 viewmodel_barrett_fire = 0xC8831600;
@@ -55,6 +58,9 @@ namespace EssenseTU6
         public UInt32 viewmodel_barrett_ads_down = 0xC88445AC;
         public UInt32 viewmodel_barrett_ADS_up = 0xC88D144C;
         public UInt32 viewmodel_barrett_ADS_down = 0xC88D1465;
+        public UInt32 iSprintInTimeBarrett = 0xC8844952; //
+        public UInt32 iDropTimeBarrett = 0xC8844932; //
+        public UInt32 iRaiseTimeBarrett = 0xC8844936; //
         //m21
         public UInt32 viewmodel_M14ebr_idle = 0xC8A50C40;
         public UInt32 viewmodel_M14ebr_fire = 0xC8A50C56;
@@ -75,6 +81,9 @@ namespace EssenseTU6
         public UInt32 viewmodel_M14ebr_acog_ADS_down = 0xC8A516B0;
         public UInt32 viewmodel_M14ebr_thermal_ADS_up = 0xC8A53588;
         public UInt32 viewmodel_M14ebr_thermal_ADS_down = 0xC8A535A8;
+        public UInt32 iSprintInTimeM21 = 0xC899B936; //
+        public UInt32 iDropTimeM21 = 0xC899B916; //
+        public UInt32 iRaiseTimeM21 = 0xC899B91A; //
         //wa2000
         public UInt32 viewmodel_wa2000_hb_open_idle = 0xC88D8597;
         public UInt32 viewmodel_wa2000_hb_open_fire = 0xC88D8EA0;
@@ -92,5 +101,8 @@ namespace EssenseTU6
         public UInt32 viewmodel_wa2000_ads_down = 0xC88EDD2E;
         public UInt32 viewmodel_wa2000_ADS_up = 0xC898011B;
         public UInt32 viewmodel_wa2000_ADS_down = 0xC8980133;
+        public UInt32 iSprintInTimeWA = 0xC88EDD2E;
+        public UInt32 iDropTimeWA = 0xC898011B;
+        public UInt32 iFirstRaiseTimeWA = 0xC8980133;
     }
 }

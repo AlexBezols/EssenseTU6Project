@@ -636,6 +636,7 @@
             this.panel4.Size = new System.Drawing.Size(163, 225);
             this.panel4.TabIndex = 21;
             this.panel4.Visible = false;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label6
             // 
@@ -655,6 +656,7 @@
             this.checkBox13.TabIndex = 4;
             this.checkBox13.Text = "Instant Shoot";
             this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
             // 
             // checkBox14
             // 
@@ -665,6 +667,7 @@
             this.checkBox14.TabIndex = 3;
             this.checkBox14.Text = "Always Nac";
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // label9
             // 
@@ -684,6 +687,7 @@
             this.checkBox15.TabIndex = 2;
             this.checkBox15.Text = "Always Adelia";
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
             // Main
             // 
