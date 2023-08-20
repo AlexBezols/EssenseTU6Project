@@ -5,4 +5,4 @@
 - Sniper Timings 3/4
 - ARs next
 
-- going to work on making it non-patch specific
+- Compiled Version: https://github.com/AlexBezols/EssenseTU6Project/releases
