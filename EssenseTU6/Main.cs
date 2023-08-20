@@ -703,10 +703,10 @@ namespace EssenseTU6
                 button10.Visible = true;
                 button3.Visible = false;
                 button2.Visible = false;
-                panel4.Visible = true;
                 panel2.Visible = false;
                 panel3.Visible = false;
-                
+                panel4.Visible = true;
+
 
             }
         }
