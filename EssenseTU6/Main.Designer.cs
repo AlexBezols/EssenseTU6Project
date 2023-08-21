@@ -48,56 +48,74 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Snipers = new System.Windows.Forms.TabPage();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NewAnimation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ARs = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.ARs = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.M4Button = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.M4SaveButton = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.Snipers = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NewAnimation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.M4Panel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.checkBox21 = new System.Windows.Forms.CheckBox();
+            this.checkBox22 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.ARs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.Snipers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.M4Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -316,190 +334,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.Snipers);
-            this.tabControl1.Controls.Add(this.ARs);
-            this.tabControl1.Location = new System.Drawing.Point(251, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(571, 576);
-            this.tabControl1.TabIndex = 18;
-            // 
-            // Snipers
-            // 
-            this.Snipers.Controls.Add(this.button12);
-            this.Snipers.Controls.Add(this.button11);
-            this.Snipers.Controls.Add(this.button10);
-            this.Snipers.Controls.Add(this.button9);
-            this.Snipers.Controls.Add(this.button8);
-            this.Snipers.Controls.Add(this.button7);
-            this.Snipers.Controls.Add(this.button3);
-            this.Snipers.Controls.Add(this.button2);
-            this.Snipers.Controls.Add(this.comboBox1);
-            this.Snipers.Controls.Add(this.button1);
-            this.Snipers.Controls.Add(this.dataGridView1);
-            this.Snipers.Location = new System.Drawing.Point(4, 22);
-            this.Snipers.Name = "Snipers";
-            this.Snipers.Padding = new System.Windows.Forms.Padding(3);
-            this.Snipers.Size = new System.Drawing.Size(563, 550);
-            this.Snipers.TabIndex = 0;
-            this.Snipers.Text = "Snipers";
-            this.Snipers.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(6, 513);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(149, 31);
-            this.button12.TabIndex = 34;
-            this.button12.Text = "Save WA2000 Changes";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Visible = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(257, 6);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(95, 23);
-            this.button11.TabIndex = 33;
-            this.button11.Text = "Select WA2000";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Visible = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(6, 513);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(149, 31);
-            this.button10.TabIndex = 32;
-            this.button10.Text = "Save M21 Changes";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Visible = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(257, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(95, 23);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "Select M21";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(257, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(95, 23);
-            this.button8.TabIndex = 30;
-            this.button8.Text = "Select Barrett";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(175, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(76, 23);
-            this.button7.TabIndex = 29;
-            this.button7.Text = "Get Info";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 513);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 31);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Save Barrett Changes";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 513);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 31);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Save Cheytac Changes";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "cheytac_mp",
-            "barrett_mp",
-            "m21_mp",
-            "wa2000_mp"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 23;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(257, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Select Cheytac";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.NewAnimation});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(550, 472);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Weapon";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Animations";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 200;
-            // 
-            // NewAnimation
-            // 
-            this.NewAnimation.HeaderText = "New Animation";
-            this.NewAnimation.Name = "NewAnimation";
-            this.NewAnimation.Width = 200;
-            // 
-            // ARs
-            // 
-            this.ARs.Location = new System.Drawing.Point(4, 22);
-            this.ARs.Name = "ARs";
-            this.ARs.Padding = new System.Windows.Forms.Padding(3);
-            this.ARs.Size = new System.Drawing.Size(563, 550);
-            this.ARs.TabIndex = 1;
-            this.ARs.Text = "ARs";
-            this.ARs.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
@@ -565,6 +399,326 @@
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
             // 
+            // ARs
+            // 
+            this.ARs.Controls.Add(this.button18);
+            this.ARs.Controls.Add(this.M4SaveButton);
+            this.ARs.Controls.Add(this.comboBox2);
+            this.ARs.Controls.Add(this.M4Button);
+            this.ARs.Controls.Add(this.dataGridView2);
+            this.ARs.Location = new System.Drawing.Point(4, 22);
+            this.ARs.Name = "ARs";
+            this.ARs.Padding = new System.Windows.Forms.Padding(3);
+            this.ARs.Size = new System.Drawing.Size(563, 550);
+            this.ARs.TabIndex = 1;
+            this.ARs.Text = "ARs";
+            this.ARs.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView2.Location = new System.Drawing.Point(6, 35);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(550, 472);
+            this.dataGridView2.TabIndex = 35;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "New Animation";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Animations";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Weapon";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // M4Button
+            // 
+            this.M4Button.Location = new System.Drawing.Point(257, 6);
+            this.M4Button.Name = "M4Button";
+            this.M4Button.Size = new System.Drawing.Size(95, 23);
+            this.M4Button.TabIndex = 36;
+            this.M4Button.Text = "Select M4";
+            this.M4Button.UseVisualStyleBackColor = true;
+            this.M4Button.Visible = false;
+            this.M4Button.Click += new System.EventHandler(this.M4Button_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "m4_mp",
+            "famas_mp",
+            "scar_mp",
+            "tavor_mp",
+            "fal_mp",
+            "m16_mp",
+            "masada_mp",
+            "fn2000_mp",
+            "ak47_mp"});
+            this.comboBox2.Location = new System.Drawing.Point(6, 8);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(163, 21);
+            this.comboBox2.TabIndex = 37;
+            // 
+            // M4SaveButton
+            // 
+            this.M4SaveButton.Location = new System.Drawing.Point(6, 513);
+            this.M4SaveButton.Name = "M4SaveButton";
+            this.M4SaveButton.Size = new System.Drawing.Size(149, 31);
+            this.M4SaveButton.TabIndex = 38;
+            this.M4SaveButton.Text = "Save M4 Changes";
+            this.M4SaveButton.UseVisualStyleBackColor = true;
+            this.M4SaveButton.Visible = false;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(175, 6);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(76, 23);
+            this.button18.TabIndex = 40;
+            this.button18.Text = "Get Info";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // Snipers
+            // 
+            this.Snipers.Controls.Add(this.button12);
+            this.Snipers.Controls.Add(this.button11);
+            this.Snipers.Controls.Add(this.button10);
+            this.Snipers.Controls.Add(this.button9);
+            this.Snipers.Controls.Add(this.button8);
+            this.Snipers.Controls.Add(this.button7);
+            this.Snipers.Controls.Add(this.button3);
+            this.Snipers.Controls.Add(this.button2);
+            this.Snipers.Controls.Add(this.comboBox1);
+            this.Snipers.Controls.Add(this.button1);
+            this.Snipers.Controls.Add(this.dataGridView1);
+            this.Snipers.Location = new System.Drawing.Point(4, 22);
+            this.Snipers.Name = "Snipers";
+            this.Snipers.Padding = new System.Windows.Forms.Padding(3);
+            this.Snipers.Size = new System.Drawing.Size(563, 550);
+            this.Snipers.TabIndex = 0;
+            this.Snipers.Text = "Snipers";
+            this.Snipers.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.NewAnimation});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 35);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(550, 472);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // NewAnimation
+            // 
+            this.NewAnimation.HeaderText = "New Animation";
+            this.NewAnimation.Name = "NewAnimation";
+            this.NewAnimation.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Animations";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Weapon";
+            this.Column1.Name = "Column1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(257, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Select Cheytac";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "cheytac_mp",
+            "barrett_mp",
+            "m21_mp",
+            "wa2000_mp"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 513);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 31);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Save Cheytac Changes";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 513);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 31);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Save Barrett Changes";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(175, 6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(76, 23);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "Get Info";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(257, 6);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(95, 23);
+            this.button8.TabIndex = 30;
+            this.button8.Text = "Select Barrett";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(257, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(95, 23);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Select M21";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(6, 513);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(149, 31);
+            this.button10.TabIndex = 32;
+            this.button10.Text = "Save M21 Changes";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(257, 6);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(95, 23);
+            this.button11.TabIndex = 33;
+            this.button11.Text = "Select WA2000";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(6, 513);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(149, 31);
+            this.button12.TabIndex = 34;
+            this.button12.Text = "Save WA2000 Changes";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Snipers);
+            this.tabControl1.Controls.Add(this.ARs);
+            this.tabControl1.Location = new System.Drawing.Point(251, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(571, 576);
+            this.tabControl1.TabIndex = 18;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(32, 58);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(91, 17);
+            this.checkBox11.TabIndex = 2;
+            this.checkBox11.Text = "Always Adelia";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Anim Timings";
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(32, 81);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(82, 17);
+            this.checkBox10.TabIndex = 3;
+            this.checkBox10.Text = "Always Nac";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged_1);
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(32, 104);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(89, 17);
+            this.checkBox9.TabIndex = 4;
+            this.checkBox9.Text = "Instant Shoot";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(59, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Barrett";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
@@ -579,65 +733,16 @@
             this.panel3.TabIndex = 20;
             this.panel3.Visible = false;
             // 
-            // label3
+            // checkBox14
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Barrett";
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(32, 104);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(89, 17);
-            this.checkBox9.TabIndex = 4;
-            this.checkBox9.Text = "Instant Shoot";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged_1);
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(32, 81);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(82, 17);
-            this.checkBox10.TabIndex = 3;
-            this.checkBox10.Text = "Always Nac";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged_1);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Anim Timings";
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(32, 58);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(91, 17);
-            this.checkBox11.TabIndex = 2;
-            this.checkBox11.Text = "Always Adelia";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged_1);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 47);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "M21 EBR";
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(32, 92);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(82, 17);
+            this.checkBox14.TabIndex = 3;
+            this.checkBox14.Text = "Always Nac";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // checkBox13
             // 
@@ -650,26 +755,6 @@
             this.checkBox13.UseVisualStyleBackColor = true;
             this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
             // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(32, 92);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(82, 17);
-            this.checkBox14.TabIndex = 3;
-            this.checkBox14.Text = "Always Nac";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(46, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Anim Timings";
-            // 
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
@@ -680,6 +765,24 @@
             this.checkBox15.Text = "Always Adelia";
             this.checkBox15.UseVisualStyleBackColor = true;
             this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(51, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "M21 EBR";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(46, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Anim Timings";
             // 
             // panel4
             // 
@@ -695,6 +798,57 @@
             this.panel4.TabIndex = 21;
             this.panel4.Visible = false;
             // 
+            // checkBox18
+            // 
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.Location = new System.Drawing.Point(32, 92);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(82, 17);
+            this.checkBox18.TabIndex = 3;
+            this.checkBox18.Text = "Always Nac";
+            this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged);
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(32, 115);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(89, 17);
+            this.checkBox17.TabIndex = 4;
+            this.checkBox17.Text = "Instant Shoot";
+            this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Location = new System.Drawing.Point(32, 69);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(91, 17);
+            this.checkBox16.TabIndex = 2;
+            this.checkBox16.Text = "Always Adelia";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(51, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "WA2000";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(46, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Anim Timings";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.LightGray;
@@ -709,56 +863,78 @@
             this.panel5.TabIndex = 22;
             this.panel5.Visible = false;
             // 
-            // label11
+            // M4Panel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(46, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Anim Timings";
+            this.M4Panel.BackColor = System.Drawing.Color.LightGray;
+            this.M4Panel.Controls.Add(this.checkBox22);
+            this.M4Panel.Controls.Add(this.label13);
+            this.M4Panel.Controls.Add(this.label14);
+            this.M4Panel.Controls.Add(this.checkBox19);
+            this.M4Panel.Controls.Add(this.checkBox20);
+            this.M4Panel.Controls.Add(this.checkBox21);
+            this.M4Panel.Location = new System.Drawing.Point(828, 34);
+            this.M4Panel.Name = "M4Panel";
+            this.M4Panel.Size = new System.Drawing.Size(163, 173);
+            this.M4Panel.TabIndex = 23;
+            this.M4Panel.Visible = false;
             // 
-            // label12
+            // label13
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(51, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "WA2000";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(46, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Anim Timings";
             // 
-            // checkBox16
+            // label14
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(32, 69);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(91, 17);
-            this.checkBox16.TabIndex = 2;
-            this.checkBox16.Text = "Always Adelia";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(59, 48);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "M4A1";
             // 
-            // checkBox17
+            // checkBox19
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(32, 115);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(89, 17);
-            this.checkBox17.TabIndex = 4;
-            this.checkBox17.Text = "Instant Shoot";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Location = new System.Drawing.Point(32, 69);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(91, 17);
+            this.checkBox19.TabIndex = 2;
+            this.checkBox19.Text = "Always Adelia";
+            this.checkBox19.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
+            // checkBox20
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(32, 92);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(82, 17);
-            this.checkBox18.TabIndex = 3;
-            this.checkBox18.Text = "Always Nac";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged);
+            this.checkBox20.AutoSize = true;
+            this.checkBox20.Location = new System.Drawing.Point(32, 115);
+            this.checkBox20.Name = "checkBox20";
+            this.checkBox20.Size = new System.Drawing.Size(89, 17);
+            this.checkBox20.TabIndex = 4;
+            this.checkBox20.Text = "Instant Shoot";
+            this.checkBox20.UseVisualStyleBackColor = true;
+            // 
+            // checkBox21
+            // 
+            this.checkBox21.AutoSize = true;
+            this.checkBox21.Location = new System.Drawing.Point(32, 92);
+            this.checkBox21.Name = "checkBox21";
+            this.checkBox21.Size = new System.Drawing.Size(82, 17);
+            this.checkBox21.TabIndex = 3;
+            this.checkBox21.Text = "Always Nac";
+            this.checkBox21.UseVisualStyleBackColor = true;
+            // 
+            // checkBox22
+            // 
+            this.checkBox22.AutoSize = true;
+            this.checkBox22.Location = new System.Drawing.Point(32, 138);
+            this.checkBox22.Name = "checkBox22";
+            this.checkBox22.Size = new System.Drawing.Size(92, 17);
+            this.checkBox22.TabIndex = 6;
+            this.checkBox22.Text = "Always E-Nac";
+            this.checkBox22.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -766,6 +942,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 600);
+            this.Controls.Add(this.M4Panel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -780,17 +957,21 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.Snipers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.ARs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Snipers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.M4Panel.ResumeLayout(false);
+            this.M4Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -817,46 +998,61 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage Snipers;
-        private System.Windows.Forms.TabPage ARs;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NewAnimation;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TabPage ARs;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button M4SaveButton;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button M4Button;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.TabPage Snipers;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NewAnimation;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel M4Panel;
+        private System.Windows.Forms.CheckBox checkBox22;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox checkBox20;
+        private System.Windows.Forms.CheckBox checkBox21;
     }
 }

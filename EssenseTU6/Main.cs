@@ -535,48 +535,33 @@ namespace EssenseTU6
             if(comboBox1.Text == "cheytac_mp")
             {
                 MessageBox.Show("cheytac_mp Loaded! Please click button to the right to load the info into the grid.");
-                button9.Visible = false;
-                button8.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-                button10.Visible = false;
-                button12.Visible = false;
-                button11.Visible = false;
                 button1.Visible = true;
+                button8.Visible = false;
+                button9.Visible = false;
+                button11.Visible = false;
             }
             if(comboBox1.Text == "barrett_mp")
             {
                 MessageBox.Show("barrett_mp Loaded! Please click button to the right to load the info into the grid.");
-                button9.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-                button10.Visible = false;
-                button12.Visible = false;
-                button11.Visible = false;
                 button1.Visible = false;
                 button8.Visible = true;
+                button9.Visible = false;
+                button11.Visible = false;
             }
             if (comboBox1.Text == "m21_mp")
             {
                 MessageBox.Show("m21_mp Loaded! Please click button to the right to load the info into the grid.");
                 button1.Visible = false;
-                button10.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
                 button8.Visible = false;
-                button11.Visible = false;
-                button12.Visible = false;
                 button9.Visible = true;
+                button11.Visible = false;
             }
             if (comboBox1.Text == "wa2000_mp")
             {
                 MessageBox.Show("wa2000_mp Loaded! Please click button to the right to load the info into the grid.");
                 button1.Visible = false;
-                button9.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-                button10.Visible = false;
                 button8.Visible = false;
+                button9.Visible = false;
                 button11.Visible = true;
             }
         }
@@ -1166,6 +1151,140 @@ namespace EssenseTU6
                 jtag2.SetMemory(offsets.iFirstRaiseTimeWA, new byte[] { 0x04, 0xE2 });
                 MessageBox.Show("Reset");
                 wa2kinstantshoot = false;
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "m4_mp")
+            {
+                MessageBox.Show("m4_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = true;
+            }
+            if (comboBox2.Text == "famas_mp")
+            {
+                MessageBox.Show("famas_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "scar_mp")
+            {
+                MessageBox.Show("scar_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "tavor_mp")
+            {
+                MessageBox.Show("tavor_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "fal_mp")
+            {
+                MessageBox.Show("fal_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "m16_mp")
+            {
+                MessageBox.Show("m16_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "masada_mp")
+            {
+                MessageBox.Show("masada_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "fn2000_mp")
+            {
+                MessageBox.Show("fn2000_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+            if (comboBox2.Text == "ak47_mp")
+            {
+                MessageBox.Show("ak47_mp Loaded! Please click button to the right to load the info into the grid.");
+                M4Button.Visible = false;
+            }
+        }
+
+        private void M4Button_Click(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "m4_mp" && M4SaveButton.Visible == false)
+            {
+                dataGridView2.Rows.Clear();
+                dataGridView2.Rows.Add(23);
+                //row1
+                dataGridView2.Rows[0].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[0].Cells[1].Value = "viewmodel_M4_idle";
+                //row2
+                dataGridView2.Rows[1].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[1].Cells[1].Value = "viewmodel_M4_fire";
+                //row3
+                dataGridView2.Rows[2].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[2].Cells[1].Value = "viewmodel_M4_reload";
+                //row4
+                dataGridView2.Rows[3].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[3].Cells[1].Value = "viewmodel_M4_reload_empty";
+                //row5
+                dataGridView2.Rows[4].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[4].Cells[1].Value = "viewmodel_M4_pullout";
+                //row6
+                dataGridView2.Rows[5].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[5].Cells[1].Value = "viewmodel_m4_first_time_pullout";
+                //row7
+                dataGridView2.Rows[6].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[6].Cells[1].Value = "viewmodel_M4_putaway";
+                //row8
+                dataGridView2.Rows[7].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[7].Cells[1].Value = "viewmodel_M4_quick_pullout";
+                //row9
+                dataGridView2.Rows[8].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[8].Cells[1].Value = "viewmodel_M4_quick_putaway";
+                //row10
+                dataGridView2.Rows[9].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[9].Cells[1].Value = "viewmodel_M4_sprint_in";
+                //row11
+                dataGridView2.Rows[10].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[10].Cells[1].Value = "viewmodel_M4_sprint_loop";
+                //row12
+                dataGridView2.Rows[11].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[11].Cells[1].Value = "viewmodel_M4_sprint_out";
+                //row13
+                dataGridView2.Rows[12].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[12].Cells[1].Value = "viewmodel_M4_shotgun_shotty_idle";
+                //row14
+                dataGridView2.Rows[13].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[13].Cells[1].Value = "viewmodel_M4_shotgun_shotty_fire";
+                //row15
+                dataGridView2.Rows[14].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[14].Cells[1].Value = "viewmodel_M4_shotgun_shotty_rechamber";
+                //row16
+                dataGridView2.Rows[15].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[15].Cells[1].Value = "viewmodel_M4_shotgun_shotty_reload_loop";
+                //row17
+                dataGridView2.Rows[16].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[16].Cells[1].Value = "viewmodel_M4_shotgun_shotty_reload_start";
+                //row18
+                dataGridView2.Rows[17].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[17].Cells[1].Value = "viewmodel_M4_shotgun_shotty_reload_end";
+                //row19
+                dataGridView2.Rows[18].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[18].Cells[1].Value = "viewmodel_M4_shotgun_shotty_pullout";
+                //row20
+                dataGridView2.Rows[19].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[19].Cells[1].Value = "viewmodel_M4_shotgun_shotty_putaway";
+                //row21
+                dataGridView2.Rows[20].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[20].Cells[1].Value = "viewmodel_M4_shotgun_bullet_2_shotty";
+                //row22
+                dataGridView2.Rows[21].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[21].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_in";
+                //row23
+                dataGridView2.Rows[22].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[22].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_loop";
+                //row24
+                dataGridView2.Rows[23].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[23].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_out";
+
+                M4SaveButton.Visible = true;
+                M4Panel.Visible = true;
+
             }
         }
     }
