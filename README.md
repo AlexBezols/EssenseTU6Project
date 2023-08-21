@@ -5,7 +5,6 @@
 - Sniper Timings 3/4
 - ARs next
 
-- Compiled Version: https://github.com/AlexBezols/EssenseTU6Project/releases
-
+#
 
 - Working toward making this non-patch specific in the future
