@@ -101,8 +101,8 @@ namespace EssenseTU6
         public UInt32 viewmodel_wa2000_ads_down = 0xC88EDD2E;
         public UInt32 viewmodel_wa2000_ADS_up = 0xC898011B;
         public UInt32 viewmodel_wa2000_ADS_down = 0xC8980133;
-        public UInt32 iSprintInTimeWA = 0xC88EDD2E;
-        public UInt32 iDropTimeWA = 0xC898011B;
-        public UInt32 iFirstRaiseTimeWA = 0xC8980133;
+        public UInt32 iSprintInTimeWA = 0xC88EE0A2;
+        public UInt32 iDropTimeWA = 0xC88EE082;
+        public UInt32 iFirstRaiseTimeWA = 0xC88EE086;
     }
 }

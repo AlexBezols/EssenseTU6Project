@@ -337,6 +337,7 @@ namespace EssenseTU6
                 panel2.Visible = true;
                 panel3.Visible = false;
                 panel4.Visible = false;
+                panel5.Visible = false;
             }
         }
 
@@ -630,6 +631,7 @@ namespace EssenseTU6
                 button10.Visible = false;
                 button2.Visible = false;
                 panel2.Visible = false;
+                panel5.Visible = false;
                 panel3.Visible = true;
                 panel4.Visible = false;
 
@@ -705,6 +707,7 @@ namespace EssenseTU6
                 button2.Visible = false;
                 panel2.Visible = false;
                 panel3.Visible = false;
+                panel5.Visible = false;
                 panel4.Visible = true;
 
 
@@ -821,11 +824,13 @@ namespace EssenseTU6
             if(jtag2.Connect(out jtag2) && sprintincheck == false)
             {
                 jtag2.SetMemory(offsets.iSprintInTimeCheytac, new byte[] { 0x00 , 0x00 });
+                MessageBox.Show("Success");
                 sprintincheck = true;
             }
             else if(sprintincheck == true)
             {
                 jtag2.SetMemory(offsets.iSprintInTimeCheytac, new byte[] { 0x01 , 0x2C });
+                MessageBox.Show("Reset");
                 sprintincheck = false;
             }
 
@@ -837,11 +842,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && droptimecheck == false)
             {
                 jtag2.SetMemory(offsets.iDropTimeCheytac, new byte[] { 0x00 , 0x00 });
+                MessageBox.Show("Success");
                 droptimecheck = true;
             }
             else if (droptimecheck == true)
             {
                 jtag2.SetMemory(offsets.iDropTimeCheytac, new byte[] { 0x04 , 0x50});
+                MessageBox.Show("Reset");
                 droptimecheck = false;
             }
         }
@@ -852,11 +859,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && instantshot == false)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeCheytac, new byte[] { 0x00 , 0x00 });
+                MessageBox.Show("Success");
                 instantshot = true;
             }
             else if (instantshot == true)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeCheytac, new byte[] { 0x03 , 0xE8 });
+                MessageBox.Show("Reset");
                 instantshot = false;
             }
         }
@@ -917,6 +926,7 @@ namespace EssenseTU6
                 panel2.Visible = false;
                 panel3.Visible = false;
                 panel4.Visible = false;
+                panel5.Visible = true;
 
             }
         }
@@ -1007,11 +1017,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && barretadelia == false)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x00 , 0x00 });
+                MessageBox.Show("Success");
                 barretadelia = true;
             }
             else if (barretadelia == true)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x01 , 0x2C });
+                MessageBox.Show("Reset");
                 barretadelia = false;
             }
         }
@@ -1022,11 +1034,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && barrettnac == false)
             {
                 jtag2.SetMemory(offsets.iDropTimeBarrett, new byte[] { 0x00 , 0x00 });
+                MessageBox.Show("Success");
                 barrettnac = true;
             }
             else if (barrettnac == true)
             {
                 jtag2.SetMemory(offsets.iDropTimeBarrett, new byte[] { 0x02 , 0xBB });
+                MessageBox.Show("Reset");
                 barrettnac = false;
             }
         }
@@ -1037,11 +1051,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && barrettinstantshot == false)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x00 , 0x00 });
+                MessageBox.Show("Success");
                 barrettinstantshot = true;
             }
             else if (barrettinstantshot == true)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x03, 0xE8 });
+                MessageBox.Show("Reset");
                 barrettinstantshot = false;
             }
         }
@@ -1052,11 +1068,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && m21adelia == false)
             {
                 jtag2.SetMemory(offsets.iSprintInTimeM21, new byte[] { 0x00, 0x00 });
+                MessageBox.Show("Success");
                 m21adelia = true;
             }
             else if (m21adelia == true)
             {
                 jtag2.SetMemory(offsets.iSprintInTimeM21, new byte[] { 0x01, 0x2C });
+                MessageBox.Show("Reset");
                 m21adelia = false;
             }
         }
@@ -1067,11 +1085,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && m21nac == false)
             {
                 jtag2.SetMemory(offsets.iDropTimeM21, new byte[] { 0x00, 0x00 });
+                MessageBox.Show("Success");
                 m21nac = true;
             }
             else if (m21nac == true)
             {
                 jtag2.SetMemory(offsets.iDropTimeM21, new byte[] { 0x02, 0x58 });
+                MessageBox.Show("Reset");
                 m21nac = false;
             }
         }
@@ -1082,11 +1102,13 @@ namespace EssenseTU6
             if (jtag2.Connect(out jtag2) && m21instantshot == false)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeM21, new byte[] { 0x00, 0x00 });
+                MessageBox.Show("Success");
                 m21instantshot = true;
             }
             else if (m21instantshot == true)
             {
                 jtag2.SetMemory(offsets.iRaiseTimeM21, new byte[] { 0x03, 0xB5 });
+                MessageBox.Show("Reset");
                 m21instantshot = false;
             }
         }
@@ -1094,6 +1116,57 @@ namespace EssenseTU6
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public bool wa2kadelia = false;
+        private void checkBox16_CheckedChanged(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2) && wa2kadelia == false)
+            {
+                jtag2.SetMemory(offsets.iSprintInTimeWA, new byte[] { 0x00, 0x00 });
+                MessageBox.Show("Success");
+                wa2kadelia = true;
+            }
+            else if (wa2kadelia == true)
+            {
+                jtag2.SetMemory(offsets.iSprintInTimeWA, new byte[] { 0x01, 0x2C });
+                MessageBox.Show("Reset");
+                wa2kadelia = false;
+            }
+        }
+
+        public bool wa2knac = false;
+        private void checkBox18_CheckedChanged(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2) && wa2knac == false)
+            {
+                jtag2.SetMemory(offsets.iDropTimeWA, new byte[] { 0x00, 0x00 });
+                MessageBox.Show("Success");
+                wa2knac = true;
+            }
+            else if (wa2knac == true)
+            {
+                jtag2.SetMemory(offsets.iDropTimeWA, new byte[] { 0x04, 0xB0 });
+                MessageBox.Show("Reset");
+                wa2knac = false;
+            }
+        }
+
+        public bool wa2kinstantshoot = false;
+        private void checkBox17_CheckedChanged(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2) && wa2kinstantshoot == false)
+            {
+                jtag2.SetMemory(offsets.iFirstRaiseTimeWA, new byte[] { 0x00, 0x00 });
+                MessageBox.Show("Success");
+                wa2kinstantshoot = true;
+            }
+            else if (wa2kinstantshoot == true)
+            {
+                jtag2.SetMemory(offsets.iFirstRaiseTimeWA, new byte[] { 0x04, 0xE2 });
+                MessageBox.Show("Reset");
+                wa2kinstantshoot = false;
+            }
         }
     }
     
