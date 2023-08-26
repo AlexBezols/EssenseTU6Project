@@ -6,6 +6,7 @@ Tool to edit viewmodels and timings on MW2 (2009) on Title Update 6 (TU6) on Xbo
 #Completed features (as of 8-20-23)
 - All Miscellaneous options
 - Viewmodel changing, Misc Weapon Options (Instant Adelia, Auto Nac, and Instant Shoot) for all snipers
+- Viewmodel changing for M4
 
 #Planned features
 - Viewmodel changing for every other weapon
