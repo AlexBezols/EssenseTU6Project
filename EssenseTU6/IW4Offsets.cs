@@ -101,8 +101,33 @@ namespace EssenseTU6
         public UInt32 viewmodel_wa2000_ads_down = 0xC88EDD2E;
         public UInt32 viewmodel_wa2000_ADS_up = 0xC898011B;
         public UInt32 viewmodel_wa2000_ADS_down = 0xC8980133;
-        public UInt32 iSprintInTimeWA = 0xC88EE0A2;
-        public UInt32 iDropTimeWA = 0xC88EE082;
-        public UInt32 iFirstRaiseTimeWA = 0xC88EE086;
+        public UInt32 iSprintInTimeWA = 0xC88EE0A2; //
+        public UInt32 iDropTimeWA = 0xC88EE082; //
+        public UInt32 iFirstRaiseTimeWA = 0xC88EE086; //
+        //m4
+        public UInt32 viewmodel_M4_idle = 0xC8590418;
+        public UInt32 viewmodel_M4_fire = 0xC859042A;
+        public UInt32 viewmodel_M4_reload = 0xC859043C;
+        public UInt32 viewmodel_M4_reload_empty = 0xC8590450;
+        public UInt32 viewmodel_M4_pullout = 0xC859046A;
+        public UInt32 viewmodel_m4_first_time_pullout = 0xC8585800;
+        public UInt32 viewmodel_M4_putaway = 0xC859047F;
+        public UInt32 viewmodel_M4_quick_pullout = 0xC8590494;
+        public UInt32 viewmodel_M4_quick_putaway = 0xC85904AF;
+        public UInt32 viewmodel_M4_sprint_in = 0xC85904CA;
+        public UInt32 viewmodel_M4_sprint_loop = 0xC85904E1;
+        public UInt32 viewmodel_M4_sprint_out = 0xC85904FA;
+        public UInt32 viewmodel_M4_shotgun_shotty_idle = 0xC76B1588;
+        public UInt32 viewmodel_M4_shotgun_shotty_fire = 0xC76B15A9;
+        public UInt32 viewmodel_M4_shotgun_shotty_rechamber = 0xC76B15CA;
+        public UInt32 viewmodel_M4_shotgun_shotty_reload_loop = 0xC76B15F0;
+        public UInt32 viewmodel_M4_shotgun_shotty_reload_start = 0xC76B1618;
+        public UInt32 viewmodel_M4_shotgun_shotty_reload_end = 0xC76B1641;
+        public UInt32 viewmodel_M4_shotgun_shotty_pullout = 0xC76B1668;
+        public UInt32 viewmodel_M4_shotgun_shotty_putaway = 0xC76B168C;
+        public UInt32 viewmodel_M4_shotgun_shotty_sprint_in = 0xC76B16D5;
+        public UInt32 viewmodel_M4_shotgun_shotty_sprint_loop = 0xC76B16FB;
+        public UInt32 viewmodel_M4_shotgun_shotty_sprint_out = 0xC76B1723;
+
     }
 }

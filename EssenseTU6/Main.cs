@@ -1,25 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using XRPCLib;
-using XDevkit;
 using JRPC_Client;
-using System.Threading;
-using System.Diagnostics;
-using System.Security.Cryptography.X509Certificates;
-using System.Collections.ObjectModel;
+using XDevkit;
 
 namespace EssenseTU6
 {
     public partial class Main : Form
     {
-        XRPC jtag = new XRPC();
         IXboxConsole jtag2;
         IW4Offsets offsets = new IW4Offsets();
         public Main()
@@ -36,7 +25,7 @@ namespace EssenseTU6
             if(checkBox1.Checked && jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xC72CE360, Encoding.ASCII.GetBytes("viewmodel_knife_melee_stab" + "\0"));
-                jtag2.XNotify("Always Knife Lunge set!");
+                MessageBox.Show("Always Knife Lunge set!");
             }
             else
             {
@@ -50,24 +39,12 @@ namespace EssenseTU6
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if(jtag2.Connect(out jtag2))
-            {
-                MessageBox.Show("Connection successful");
-            }
-            else
-            {
-                MessageBox.Show("Connection failed");
-            }
-        }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked && jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xC72CE360, Encoding.ASCII.GetBytes("viewmodel_riotshield_melee" + "\0"));
-                jtag2.XNotify("Always Riot Shield Bash Set!");
+                MessageBox.Show("Always Riot Shield Bash Set!");
             }
             else
             {
@@ -89,7 +66,7 @@ namespace EssenseTU6
             if(jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xA51C4707, Encoding.ASCII.GetBytes(textBox2.Text + "\0"));
-                jtag2.XNotify("Custom Title Set!");
+                MessageBox.Show("Custom Title Set!");
             }
         }
 
@@ -98,12 +75,12 @@ namespace EssenseTU6
             if(jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xC8CB7390, Encoding.ASCII.GetBytes("viewmodel_spas12_grip_pullout" + "\0"));
-                jtag2.XNotify("AA12 Barrel Roll Set");
+                MessageBox.Show("AA12 Barrel Roll Set");
             }
             else
             {
                 jtag2.SetMemory(0xC8CB7390, Encoding.ASCII.GetBytes("viewmodel_aa12_grip_pullout" + "\0"));
-                jtag2.XNotify("AA12 Barrel Roll Reset");
+                MessageBox.Show("AA12 Barrel Roll Reset");
             }
         }
 
@@ -118,7 +95,7 @@ namespace EssenseTU6
                 //jtag2.SetMemory(0xA473B024, Encoding.ASCII.GetBytes(textBox3.Text + "\0"));
                 //jtag2.SetMemory(0xA473B300, Encoding.ASCII.GetBytes(textBox3.Text + "\0"));
                 //jtag2.SetMemory(0xA473C760, Encoding.ASCII.GetBytes(textBox3.Text + "\0"));
-                jtag2.XNotify("Title Text Set!");
+                MessageBox.Show("Title Text Set!");
             }
         }
 
@@ -141,12 +118,12 @@ namespace EssenseTU6
             if(checkBox6.Checked && jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xC7E357A8, Encoding.ASCII.GetBytes("viewmodel_riotshield_sprint_loop" + "\0"));
-                jtag2.XNotify("Riotshield Auto Sprint Set");
+                MessageBox.Show("Riotshield Auto Sprint Set");
             }
             else
             {
                 jtag2.SetMemory(0xC7E357A8, Encoding.ASCII.GetBytes("viewmodel_riotshield_pullout" + "\0"));
-                jtag2.XNotify("Riotshield Auto Sprint Reset");
+                MessageBox.Show("Riotshield Auto Sprint Reset");
             }
         }
 
@@ -155,12 +132,12 @@ namespace EssenseTU6
             if(checkBox7.Checked && jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xC8B0B4B1, new byte[] { 0xB6 });
-                jtag2.XNotify("Fake Heartbeat Sensor Set");
+                MessageBox.Show("Fake Heartbeat Sensor Set");
             }
             else
             {
                 jtag2.SetMemory(0xC8B0B4B1, new byte[] { 0xD6 });
-                jtag2.XNotify("Fake Heartbeat Sensor Reset");
+                MessageBox.Show("Fake Heartbeat Sensor Reset");
             }
         }
 
@@ -225,12 +202,12 @@ namespace EssenseTU6
             if (checkBox12.Checked && jtag2.Connect(out jtag2))
             {
                 jtag2.SetMemory(0xC8CB92D4, Encoding.ASCII.GetBytes("viewmodel_knifethrow_hold" + "\0"));
-                jtag2.XNotify("AA12 Always Nac Set");
+                MessageBox.Show("AA12 Always Nac Set");
             }
             else
             {
                 jtag2.SetMemory(0xC8CB92D4, Encoding.ASCII.GetBytes("viewmodel_aa12_putaway" + "\0"));
-                jtag2.XNotify("AA12 Always Nac Reset");
+                MessageBox.Show("AA12 Always Nac Reset");
             }
         }
 
@@ -261,7 +238,7 @@ namespace EssenseTU6
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(comboBox1.Text == "cheytac_mp" && button2.Visible == false)
+            if(comboBox1.Text == "cheytac_mp" && button2.Visible == false && jtag2.Connect(out jtag2))
             {
 
                 dataGridView1.Rows.Clear();
@@ -328,7 +305,7 @@ namespace EssenseTU6
                 dataGridView1.Rows[19].Cells[1].Value = "viewmodel_cheytac_thermal_ADS_down";
 
 
-
+                jtag2.XNotify("cheytac_mp is being edited");
 
 
                 button2.Visible = true;
@@ -338,6 +315,7 @@ namespace EssenseTU6
                 panel3.Visible = false;
                 panel4.Visible = false;
                 panel5.Visible = false;
+                M4Panel.Visible = false;
             }
         }
 
@@ -346,108 +324,108 @@ namespace EssenseTU6
             if (dataGridView1.Rows[0].Cells[2].Value !=null && jtag2.Connect(out jtag2)) // row1
             {
                 jtag2.SetMemory(offsets.CheytacIdle, Encoding.ASCII.GetBytes(dataGridView1.Rows[0].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[0].Cells[1].Value + "Changed To" + dataGridView1.Rows[0].Cells[2].Value);
             }
             if(dataGridView1.Rows[1].Cells[2].Value != null && jtag2.Connect(out jtag2)) //row 2
             {
                 jtag2.SetMemory(offsets.CheytacFire, Encoding.ASCII.GetBytes(dataGridView1.Rows[1].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
             }
             if(dataGridView1.Rows[2].Cells[2].Value !=null && jtag2.Connect(out jtag2)) // row 3
             {
                 jtag2.SetMemory(offsets.CheytacRechamber, Encoding.ASCII.GetBytes(dataGridView1.Rows[2].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
             }
             if (dataGridView1.Rows[3].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 4
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_reload, Encoding.ASCII.GetBytes(dataGridView1.Rows[3].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
             }
             if (dataGridView1.Rows[4].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 5
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_reload_empty, Encoding.ASCII.GetBytes(dataGridView1.Rows[4].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
             }
             if (dataGridView1.Rows[5].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 6
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_pullout, Encoding.ASCII.GetBytes(dataGridView1.Rows[5].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
             }
             if (dataGridView1.Rows[6].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 7
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_putaway, Encoding.ASCII.GetBytes(dataGridView1.Rows[6].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
             }
             if (dataGridView1.Rows[7].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 8
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_pullout_quick, Encoding.ASCII.GetBytes(dataGridView1.Rows[7].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
             }
             if (dataGridView1.Rows[8].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 9
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_putaway_quick, Encoding.ASCII.GetBytes(dataGridView1.Rows[8].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
             }
             if (dataGridView1.Rows[9].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 10
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_sprint_in, Encoding.ASCII.GetBytes(dataGridView1.Rows[9].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
             }
             if (dataGridView1.Rows[10].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 11
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_sprint_loop, Encoding.ASCII.GetBytes(dataGridView1.Rows[10].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
             }
             if (dataGridView1.Rows[11].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 12
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_sprint_out, Encoding.ASCII.GetBytes(dataGridView1.Rows[11].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
             }
             if (dataGridView1.Rows[12].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_rechamber_ads, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
             }
             if (dataGridView1.Rows[13].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 14
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[13].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_cheytac_ads_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[13].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[13].Cells[1].Value + " Changed To " + dataGridView1.Rows[13].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[13].Cells[1].Value + " Changed To " + dataGridView1.Rows[13].Cells[2].Value);
             }
             if (dataGridView1.Rows[14].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 15
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[14].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_cheytac_ads_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[14].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[14].Cells[1].Value + " Changed To " + dataGridView1.Rows[14].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[14].Cells[1].Value + " Changed To " + dataGridView1.Rows[14].Cells[2].Value);
             }
             if (dataGridView1.Rows[15].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 16
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_fire_ads, Encoding.ASCII.GetBytes(dataGridView1.Rows[15].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[15].Cells[1].Value + " Changed To " + dataGridView1.Rows[15].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[15].Cells[1].Value + " Changed To " + dataGridView1.Rows[15].Cells[2].Value);
             }
             if (dataGridView1.Rows[16].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 17
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_acog_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[16].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_cheytac_acog_ads_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[16].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[16].Cells[1].Value + " Changed To " + dataGridView1.Rows[16].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[16].Cells[1].Value + " Changed To " + dataGridView1.Rows[16].Cells[2].Value);
             }
             if (dataGridView1.Rows[17].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 18
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_acog_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[17].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_cheytac_acog_ads_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[17].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[17].Cells[1].Value + " Changed To " + dataGridView1.Rows[17].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[17].Cells[1].Value + " Changed To " + dataGridView1.Rows[17].Cells[2].Value);
             }
             if (dataGridView1.Rows[18].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 19
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_thermal_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[18].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_cheytac_thermal_ads_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[18].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[18].Cells[1].Value + " Changed To " + dataGridView1.Rows[18].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[18].Cells[1].Value + " Changed To " + dataGridView1.Rows[18].Cells[2].Value);
             }
             if (dataGridView1.Rows[19].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 20
             {
                 jtag2.SetMemory(offsets.viewmodel_cheytac_thermal_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[19].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_cheytac_thermal_ads_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[19].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[19].Cells[1].Value + " Changed To " + dataGridView1.Rows[19].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[19].Cells[1].Value + " Changed To " + dataGridView1.Rows[19].Cells[2].Value);
             }
             else if(!jtag2.Connect(out jtag2))
             {
@@ -460,69 +438,69 @@ namespace EssenseTU6
             if (dataGridView1.Rows[0].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row1
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_idle, Encoding.ASCII.GetBytes(dataGridView1.Rows[0].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
             }
             if (dataGridView1.Rows[1].Cells[2].Value != null && jtag2.Connect(out jtag2)) //row 2
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_fire, Encoding.ASCII.GetBytes(dataGridView1.Rows[1].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
             }
             if (dataGridView1.Rows[2].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 3
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_reload, Encoding.ASCII.GetBytes(dataGridView1.Rows[2].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
             }
             if (dataGridView1.Rows[3].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 4
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_reload_empty, Encoding.ASCII.GetBytes(dataGridView1.Rows[3].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
             }
             if (dataGridView1.Rows[4].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 5
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_pullout, Encoding.ASCII.GetBytes(dataGridView1.Rows[4].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
             }
             if (dataGridView1.Rows[5].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 6
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_putaway, Encoding.ASCII.GetBytes(dataGridView1.Rows[5].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
             }
             if (dataGridView1.Rows[6].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 7
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_pullout_quick, Encoding.ASCII.GetBytes(dataGridView1.Rows[6].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
             }
             if (dataGridView1.Rows[7].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 8
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_putaway_quick, Encoding.ASCII.GetBytes(dataGridView1.Rows[7].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
             }
             if (dataGridView1.Rows[8].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 9
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_sprint_in, Encoding.ASCII.GetBytes(dataGridView1.Rows[8].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
             }
             if (dataGridView1.Rows[9].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 10
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_sprint_loop, Encoding.ASCII.GetBytes(dataGridView1.Rows[9].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
             }
             if (dataGridView1.Rows[10].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 11
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_sprint_out, Encoding.ASCII.GetBytes(dataGridView1.Rows[10].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
             }
             if (dataGridView1.Rows[11].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 12
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_ads_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[11].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_barrett_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[11].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
             }
             if (dataGridView1.Rows[12].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_barrett_ads_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_barrett_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
             }
             else if (!jtag2.Connect(out jtag2))
             {
@@ -568,7 +546,7 @@ namespace EssenseTU6
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "barrett_mp" && button3.Visible == false)
+            if (comboBox1.Text == "barrett_mp" && button3.Visible == false && jtag2.Connect(out jtag2))
             {
                 dataGridView1.Rows.Clear();
                 dataGridView1.Rows.Add(12);
@@ -612,6 +590,8 @@ namespace EssenseTU6
                 dataGridView1.Rows[12].Cells[0].Value = "barrett_mp";
                 dataGridView1.Rows[12].Cells[1].Value = "viewmodel_barrett_ads_down";
 
+                jtag2.XNotify("barrett_mp is being edited");
+
                 button3.Visible = true;
                 button10.Visible = false;
                 button2.Visible = false;
@@ -619,13 +599,14 @@ namespace EssenseTU6
                 panel5.Visible = false;
                 panel3.Visible = true;
                 panel4.Visible = false;
+                M4Panel.Visible = false;
 
             }
         }
         
         private void button9_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "m21_mp" && button10.Visible == false)
+            if (comboBox1.Text == "m21_mp" && button10.Visible == false && jtag2.Connect(out jtag2))
             {
                 dataGridView1.Rows.Clear();
                 dataGridView1.Rows.Add(18);
@@ -687,6 +668,8 @@ namespace EssenseTU6
                 dataGridView1.Rows[18].Cells[0].Value = "m21_mp";
                 dataGridView1.Rows[18].Cells[1].Value = "viewmodel_M14ebr_thermal_ADS_down";
 
+                jtag2.XNotify("m21_mp is being edited");
+
                 button10.Visible = true;
                 button3.Visible = false;
                 button2.Visible = false;
@@ -694,6 +677,7 @@ namespace EssenseTU6
                 panel3.Visible = false;
                 panel5.Visible = false;
                 panel4.Visible = true;
+                M4Panel.Visible = false;
 
 
             }
@@ -704,97 +688,97 @@ namespace EssenseTU6
             if (dataGridView1.Rows[0].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row1
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_idle, Encoding.ASCII.GetBytes(dataGridView1.Rows[0].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
             }
             if (dataGridView1.Rows[1].Cells[2].Value != null && jtag2.Connect(out jtag2)) //row 2
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_fire, Encoding.ASCII.GetBytes(dataGridView1.Rows[1].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
             }
             if (dataGridView1.Rows[2].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 3
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_fire_last, Encoding.ASCII.GetBytes(dataGridView1.Rows[2].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
             }
             if (dataGridView1.Rows[3].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 4
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_reload, Encoding.ASCII.GetBytes(dataGridView1.Rows[3].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
             }
             if (dataGridView1.Rows[4].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 5
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_reload_empty, Encoding.ASCII.GetBytes(dataGridView1.Rows[4].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
             }
             if (dataGridView1.Rows[5].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 6
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_pullout, Encoding.ASCII.GetBytes(dataGridView1.Rows[5].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
             }
             if (dataGridView1.Rows[6].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 7
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_pullout_first, Encoding.ASCII.GetBytes(dataGridView1.Rows[6].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
             }
             if (dataGridView1.Rows[7].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 8
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_putaway, Encoding.ASCII.GetBytes(dataGridView1.Rows[7].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
             }
             if (dataGridView1.Rows[8].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 9
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_pullout_fast, Encoding.ASCII.GetBytes(dataGridView1.Rows[8].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
             }
             if (dataGridView1.Rows[9].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 10
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_sprint_in, Encoding.ASCII.GetBytes(dataGridView1.Rows[9].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
             }
             if (dataGridView1.Rows[10].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 11
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_sprint_loop, Encoding.ASCII.GetBytes(dataGridView1.Rows[10].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
             }
             if (dataGridView1.Rows[11].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 12
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_sprint_out, Encoding.ASCII.GetBytes(dataGridView1.Rows[11].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
             }
             if (dataGridView1.Rows[12].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_fire_ads, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
             }
             if (dataGridView1.Rows[13].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_scope_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[13].Cells[1].Value + " Changed To " + dataGridView1.Rows[13].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[13].Cells[1].Value + " Changed To " + dataGridView1.Rows[13].Cells[2].Value);
             }
             if (dataGridView1.Rows[14].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_scope_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[14].Cells[1].Value + " Changed To " + dataGridView1.Rows[14].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[14].Cells[1].Value + " Changed To " + dataGridView1.Rows[14].Cells[2].Value);
             }
             if (dataGridView1.Rows[15].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_acog_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[15].Cells[1].Value + " Changed To " + dataGridView1.Rows[15].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[15].Cells[1].Value + " Changed To " + dataGridView1.Rows[15].Cells[2].Value);
             }
             if (dataGridView1.Rows[16].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_acog_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[16].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[16].Cells[1].Value + " Changed To " + dataGridView1.Rows[16].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[16].Cells[1].Value + " Changed To " + dataGridView1.Rows[16].Cells[2].Value);
             }
             if (dataGridView1.Rows[17].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_thermal_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[17].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[17].Cells[1].Value + " Changed To " + dataGridView1.Rows[17].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[17].Cells[1].Value + " Changed To " + dataGridView1.Rows[17].Cells[2].Value);
             }
             if (dataGridView1.Rows[18].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_M14ebr_thermal_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[18].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[18].Cells[1].Value + " Changed To " + dataGridView1.Rows[18].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[18].Cells[1].Value + " Changed To " + dataGridView1.Rows[18].Cells[2].Value);
             }
             else if (!jtag2.Connect(out jtag2))
             {
@@ -857,7 +841,7 @@ namespace EssenseTU6
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "wa2000_mp" && button12.Visible == false)
+            if (comboBox1.Text == "wa2000_mp" && button12.Visible == false && jtag2.Connect(out jtag2))
             {
                 dataGridView1.Rows.Clear();
                 dataGridView1.Rows.Add(13);
@@ -904,6 +888,8 @@ namespace EssenseTU6
                 dataGridView1.Rows[13].Cells[0].Value = "wa2000_mp";
                 dataGridView1.Rows[13].Cells[1].Value = "viewmodel_wa2000_ads_down";
 
+                jtag2.XNotify("wa2000_mp is being edited");
+
                 button12.Visible = true;
                 button10.Visible = false;
                 button3.Visible = false;
@@ -912,6 +898,7 @@ namespace EssenseTU6
                 panel3.Visible = false;
                 panel4.Visible = false;
                 panel5.Visible = true;
+                M4Panel.Visible = false;
 
             }
         }
@@ -921,74 +908,74 @@ namespace EssenseTU6
             if (dataGridView1.Rows[0].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row1
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_idle, Encoding.ASCII.GetBytes(dataGridView1.Rows[0].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[0].Cells[1].Value + " Changed To " + dataGridView1.Rows[0].Cells[2].Value);
             }
             if (dataGridView1.Rows[1].Cells[2].Value != null && jtag2.Connect(out jtag2)) //row 2
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_fire, Encoding.ASCII.GetBytes(dataGridView1.Rows[1].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[1].Cells[1].Value + " Changed To " + dataGridView1.Rows[1].Cells[2].Value);
             }
             if (dataGridView1.Rows[2].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 3
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_reload, Encoding.ASCII.GetBytes(dataGridView1.Rows[2].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[2].Cells[1].Value + " Changed To " + dataGridView1.Rows[2].Cells[2].Value);
             }
             if (dataGridView1.Rows[3].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 4
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_reload_empty, Encoding.ASCII.GetBytes(dataGridView1.Rows[3].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[3].Cells[1].Value + " Changed To " + dataGridView1.Rows[3].Cells[2].Value);
             }
             if (dataGridView1.Rows[4].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 5
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_pullout, Encoding.ASCII.GetBytes(dataGridView1.Rows[4].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[4].Cells[1].Value + " Changed To " + dataGridView1.Rows[4].Cells[2].Value);
             }
             if (dataGridView1.Rows[5].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 6
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_first_time_pullout, Encoding.ASCII.GetBytes(dataGridView1.Rows[5].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[5].Cells[1].Value + " Changed To " + dataGridView1.Rows[5].Cells[2].Value);
             }
             if (dataGridView1.Rows[6].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 7
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_putaway, Encoding.ASCII.GetBytes(dataGridView1.Rows[6].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[6].Cells[1].Value + " Changed To " + dataGridView1.Rows[6].Cells[2].Value);
             }
             if (dataGridView1.Rows[7].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 8
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_quick_pullout, Encoding.ASCII.GetBytes(dataGridView1.Rows[7].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[7].Cells[1].Value + " Changed To " + dataGridView1.Rows[7].Cells[2].Value);
             }
             if (dataGridView1.Rows[8].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 9
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_quick_putaway, Encoding.ASCII.GetBytes(dataGridView1.Rows[8].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[8].Cells[1].Value + " Changed To " + dataGridView1.Rows[8].Cells[2].Value);
             }
             if (dataGridView1.Rows[9].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 10
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_sprint_in, Encoding.ASCII.GetBytes(dataGridView1.Rows[9].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[9].Cells[1].Value + " Changed To " + dataGridView1.Rows[9].Cells[2].Value);
             }
             if (dataGridView1.Rows[10].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 11
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_sprint_loop, Encoding.ASCII.GetBytes(dataGridView1.Rows[10].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[10].Cells[1].Value + " Changed To " + dataGridView1.Rows[10].Cells[2].Value);
             }
             if (dataGridView1.Rows[11].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 12
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_hb_open_sprint_out, Encoding.ASCII.GetBytes(dataGridView1.Rows[11].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[11].Cells[1].Value + " Changed To " + dataGridView1.Rows[11].Cells[2].Value);
             }
             if (dataGridView1.Rows[12].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_ads_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_wa2000_ADS_up, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[12].Cells[1].Value + " Changed To " + dataGridView1.Rows[12].Cells[2].Value);
             }
             if (dataGridView1.Rows[13].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
             {
                 jtag2.SetMemory(offsets.viewmodel_wa2000_ads_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
                 jtag2.SetMemory(offsets.viewmodel_wa2000_ADS_down, Encoding.ASCII.GetBytes(dataGridView1.Rows[12].Cells[2].Value + "\0"));
-                jtag2.XNotify(dataGridView1.Rows[13].Cells[1].Value + " Changed To " + dataGridView1.Rows[13].Cells[2].Value);
+                MessageBox.Show(dataGridView1.Rows[13].Cells[1].Value + " Changed To " + dataGridView1.Rows[13].Cells[2].Value);
             }
             else if (!jtag2.Connect(out jtag2))
             {
@@ -1001,13 +988,13 @@ namespace EssenseTU6
         {
             if (jtag2.Connect(out jtag2) && barretadelia == false)
             {
-                jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x00 , 0x00 });
+                jtag2.SetMemory(offsets.iSprintInTimeBarrett, new byte[] { 0x00 , 0x00 });
                 MessageBox.Show("Success");
                 barretadelia = true;
             }
             else if (barretadelia == true)
             {
-                jtag2.SetMemory(offsets.iRaiseTimeBarrett, new byte[] { 0x01 , 0x2C });
+                jtag2.SetMemory(offsets.iSprintInTimeBarrett, new byte[] { 0x01 , 0x2C });
                 MessageBox.Show("Reset");
                 barretadelia = false;
             }
@@ -1205,10 +1192,10 @@ namespace EssenseTU6
 
         private void M4Button_Click(object sender, EventArgs e)
         {
-            if (comboBox2.Text == "m4_mp" && M4SaveButton.Visible == false)
+            if (comboBox2.Text == "m4_mp" && M4SaveButton.Visible == false && jtag2.Connect(out jtag2))
             {
                 dataGridView2.Rows.Clear();
-                dataGridView2.Rows.Add(23);
+                dataGridView2.Rows.Add(22);
                 //row1
                 dataGridView2.Rows[0].Cells[0].Value = "m4_mp";
                 dataGridView2.Rows[0].Cells[1].Value = "viewmodel_M4_idle";
@@ -1269,23 +1256,169 @@ namespace EssenseTU6
                 //row20
                 dataGridView2.Rows[19].Cells[0].Value = "m4_mp";
                 dataGridView2.Rows[19].Cells[1].Value = "viewmodel_M4_shotgun_shotty_putaway";
-                //row21
-                dataGridView2.Rows[20].Cells[0].Value = "m4_mp";
-                dataGridView2.Rows[20].Cells[1].Value = "viewmodel_M4_shotgun_bullet_2_shotty";
                 //row22
-                dataGridView2.Rows[21].Cells[0].Value = "m4_mp";
-                dataGridView2.Rows[21].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_in";
+                dataGridView2.Rows[20].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[20].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_in";
                 //row23
-                dataGridView2.Rows[22].Cells[0].Value = "m4_mp";
-                dataGridView2.Rows[22].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_loop";
+                dataGridView2.Rows[21].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[21].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_loop";
                 //row24
-                dataGridView2.Rows[23].Cells[0].Value = "m4_mp";
-                dataGridView2.Rows[23].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_out";
+                dataGridView2.Rows[22].Cells[0].Value = "m4_mp";
+                dataGridView2.Rows[22].Cells[1].Value = "viewmodel_M4_shotgun_shotty_sprint_out";
+
+                jtag2.XNotify("m4_mp is being edited");
 
                 M4SaveButton.Visible = true;
                 M4Panel.Visible = true;
 
             }
+        }
+
+        private void M4SaveButton_Click(object sender, EventArgs e)
+        {
+            if (jtag2.Connect(out jtag2)) // row1
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_idle, Encoding.ASCII.GetBytes(dataGridView2.Rows[0].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[0].Cells[1].Value + " Changed To " + dataGridView2.Rows[0].Cells[2].Value);
+            }
+            if (jtag2.Connect(out jtag2)) //row 2
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_fire, Encoding.ASCII.GetBytes(dataGridView2.Rows[1].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[1].Cells[1].Value + " Changed To " + dataGridView2.Rows[1].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[2].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 3
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_reload, Encoding.ASCII.GetBytes(dataGridView2.Rows[2].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[2].Cells[1].Value + " Changed To " + dataGridView2.Rows[2].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[3].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 4
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_reload_empty, Encoding.ASCII.GetBytes(dataGridView2.Rows[3].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[3].Cells[1].Value + " Changed To " + dataGridView2.Rows[3].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[4].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 5
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_quick_pullout, Encoding.ASCII.GetBytes(dataGridView2.Rows[4].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[4].Cells[1].Value + " Changed To " + dataGridView2.Rows[4].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[5].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 6
+            {
+                jtag2.SetMemory(offsets.viewmodel_m4_first_time_pullout, Encoding.ASCII.GetBytes(dataGridView2.Rows[5].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[5].Cells[1].Value + " Changed To " + dataGridView2.Rows[5].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[6].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 7
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_putaway, Encoding.ASCII.GetBytes(dataGridView2.Rows[6].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[6].Cells[1].Value + " Changed To " + dataGridView2.Rows[6].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[7].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 8
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_quick_pullout, Encoding.ASCII.GetBytes(dataGridView2.Rows[7].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[7].Cells[1].Value + " Changed To " + dataGridView2.Rows[7].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[8].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 9
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_quick_putaway, Encoding.ASCII.GetBytes(dataGridView2.Rows[8].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[8].Cells[1].Value + " Changed To " + dataGridView2.Rows[8].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[9].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 10
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_sprint_in, Encoding.ASCII.GetBytes(dataGridView2.Rows[9].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[9].Cells[1].Value + " Changed To " + dataGridView2.Rows[9].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[10].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 11
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_sprint_loop, Encoding.ASCII.GetBytes(dataGridView2.Rows[10].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[10].Cells[1].Value + " Changed To " + dataGridView2.Rows[10].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[11].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 12
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_sprint_out, Encoding.ASCII.GetBytes(dataGridView2.Rows[11].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[11].Cells[1].Value + " Changed To " + dataGridView2.Rows[11].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[12].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_idle, Encoding.ASCII.GetBytes(dataGridView2.Rows[12].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[12].Cells[1].Value + " Changed To " + dataGridView2.Rows[12].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[13].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_fire, Encoding.ASCII.GetBytes(dataGridView2.Rows[13].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[13].Cells[1].Value + " Changed To " + dataGridView2.Rows[13].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[14].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_rechamber, Encoding.ASCII.GetBytes(dataGridView2.Rows[14].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[14].Cells[1].Value + " Changed To " + dataGridView2.Rows[14].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[15].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_reload_loop, Encoding.ASCII.GetBytes(dataGridView2.Rows[15].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[15].Cells[1].Value + " Changed To " + dataGridView2.Rows[15].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[16].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_reload_start, Encoding.ASCII.GetBytes(dataGridView2.Rows[16].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[16].Cells[1].Value + " Changed To " + dataGridView2.Rows[16].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[17].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_reload_end, Encoding.ASCII.GetBytes(dataGridView2.Rows[17].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[17].Cells[1].Value + " Changed To " + dataGridView2.Rows[17].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[18].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_pullout, Encoding.ASCII.GetBytes(dataGridView2.Rows[18].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[18].Cells[1].Value + " Changed To " + dataGridView2.Rows[18].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[19].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_putaway, Encoding.ASCII.GetBytes(dataGridView2.Rows[19].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[19].Cells[1].Value + " Changed To " + dataGridView2.Rows[19].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[20].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_sprint_in, Encoding.ASCII.GetBytes(dataGridView2.Rows[20].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[20].Cells[1].Value + " Changed To " + dataGridView2.Rows[20].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[21].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_sprint_loop, Encoding.ASCII.GetBytes(dataGridView2.Rows[21].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[21].Cells[1].Value + " Changed To " + dataGridView2.Rows[21].Cells[2].Value);
+            }
+            if (dataGridView2.Rows[22].Cells[2].Value != null && jtag2.Connect(out jtag2)) // row 13
+            {
+                jtag2.SetMemory(offsets.viewmodel_M4_shotgun_shotty_sprint_out, Encoding.ASCII.GetBytes(dataGridView2.Rows[22].Cells[2].Value + "\0"));
+                MessageBox.Show(dataGridView2.Rows[22].Cells[1].Value + " Changed To " + dataGridView2.Rows[22].Cells[2].Value);
+            }
+            else if (!jtag2.Connect(out jtag2))
+            {
+                MessageBox.Show("Console is not connected");
+            }
+        }
+
+        public bool MiscPanelOpenClose = false;
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if(MiscPanelOpenClose == false &&  MiscPanel.Visible == false)
+            {
+                button13.Text = "Hide Misc Panel";
+                MiscPanel.Visible = true;
+                MiscPanelOpenClose = true;
+                button13.BackColor = Color.Red;
+            }
+            else
+            {
+                button13.Text = "Open Misc Panel";
+                MiscPanel.Visible = false;
+                MiscPanelOpenClose = false;
+                button13.BackColor = Color.FromArgb(255, 192, 128);
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://pastebin.com/FmTKgsDN");
         }
     }
     

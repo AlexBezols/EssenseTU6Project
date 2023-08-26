@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.MiscPanel = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,8 +45,6 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
@@ -55,29 +52,29 @@
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.ARs = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.M4Button = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.M4SaveButton = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
+            this.M4SaveButton = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.M4Button = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Snipers = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NewAnimation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NewAnimation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -98,14 +95,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.M4Panel = new System.Windows.Forms.Panel();
+            this.checkBox22 = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.checkBox20 = new System.Windows.Forms.CheckBox();
             this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button13 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.MiscPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.ARs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -116,48 +115,38 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.M4Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // MiscPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.checkBox12);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.linkLabel2);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 379);
-            this.panel1.TabIndex = 0;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(19, 156);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(133, 17);
-            this.checkBox12.TabIndex = 15;
-            this.checkBox12.Text = "AA12 Grip Always Nac";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
+            this.MiscPanel.AllowDrop = true;
+            this.MiscPanel.BackColor = System.Drawing.Color.LightGray;
+            this.MiscPanel.Controls.Add(this.button6);
+            this.MiscPanel.Controls.Add(this.textBox4);
+            this.MiscPanel.Controls.Add(this.label10);
+            this.MiscPanel.Controls.Add(this.checkBox7);
+            this.MiscPanel.Controls.Add(this.checkBox6);
+            this.MiscPanel.Controls.Add(this.linkLabel2);
+            this.MiscPanel.Controls.Add(this.button5);
+            this.MiscPanel.Controls.Add(this.textBox3);
+            this.MiscPanel.Controls.Add(this.linkLabel1);
+            this.MiscPanel.Controls.Add(this.button4);
+            this.MiscPanel.Controls.Add(this.textBox2);
+            this.MiscPanel.Controls.Add(this.label8);
+            this.MiscPanel.Controls.Add(this.label7);
+            this.MiscPanel.Controls.Add(this.checkBox3);
+            this.MiscPanel.Controls.Add(this.checkBox2);
+            this.MiscPanel.Controls.Add(this.checkBox1);
+            this.MiscPanel.Location = new System.Drawing.Point(12, 40);
+            this.MiscPanel.Name = "MiscPanel";
+            this.MiscPanel.Size = new System.Drawing.Size(222, 342);
+            this.MiscPanel.TabIndex = 0;
+            this.MiscPanel.Visible = false;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(146, 205);
+            this.button6.Location = new System.Drawing.Point(136, 182);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(66, 23);
             this.button6.TabIndex = 21;
@@ -167,7 +156,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(16, 207);
+            this.textBox4.Location = new System.Drawing.Point(6, 184);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(124, 20);
             this.textBox4.TabIndex = 20;
@@ -176,7 +165,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 182);
+            this.label10.Location = new System.Drawing.Point(36, 159);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 13);
             this.label10.TabIndex = 18;
@@ -185,7 +174,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(19, 124);
+            this.checkBox7.Location = new System.Drawing.Point(9, 101);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(136, 30);
             this.checkBox7.TabIndex = 17;
@@ -196,7 +185,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(19, 103);
+            this.checkBox6.Location = new System.Drawing.Point(9, 80);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(127, 17);
             this.checkBox6.TabIndex = 16;
@@ -207,7 +196,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(14, 335);
+            this.linkLabel2.Location = new System.Drawing.Point(4, 312);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(34, 13);
             this.linkLabel2.TabIndex = 15;
@@ -217,7 +206,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(146, 309);
+            this.button5.Location = new System.Drawing.Point(136, 286);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(66, 23);
             this.button5.TabIndex = 14;
@@ -227,7 +216,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(16, 312);
+            this.textBox3.Location = new System.Drawing.Point(6, 289);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(124, 20);
             this.textBox3.TabIndex = 13;
@@ -236,7 +225,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(14, 270);
+            this.linkLabel1.Location = new System.Drawing.Point(4, 247);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(59, 13);
             this.linkLabel1.TabIndex = 12;
@@ -246,7 +235,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(146, 284);
+            this.button4.Location = new System.Drawing.Point(136, 261);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(66, 23);
             this.button4.TabIndex = 11;
@@ -256,7 +245,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 286);
+            this.textBox2.Location = new System.Drawing.Point(6, 263);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(124, 20);
             this.textBox2.TabIndex = 7;
@@ -265,7 +254,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(39, 252);
+            this.label8.Location = new System.Drawing.Point(29, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(135, 13);
             this.label8.TabIndex = 6;
@@ -274,7 +263,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(71, 234);
+            this.label7.Location = new System.Drawing.Point(61, 211);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 5;
@@ -283,7 +272,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(19, 80);
+            this.checkBox3.Location = new System.Drawing.Point(9, 57);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(125, 17);
             this.checkBox3.TabIndex = 3;
@@ -294,7 +283,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(19, 57);
+            this.checkBox2.Location = new System.Drawing.Point(9, 34);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(140, 17);
             this.checkBox2.TabIndex = 2;
@@ -305,34 +294,13 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(20, 34);
+            this.checkBox1.Location = new System.Drawing.Point(10, 11);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(119, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Always Knife Lunge";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Misc";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::EssenseTU6.Properties.Resources.FvJhFn2X0AgC_Su;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 396);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 192);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -414,47 +382,26 @@
             this.ARs.Text = "ARs";
             this.ARs.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // button18
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 35);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(550, 472);
-            this.dataGridView2.TabIndex = 35;
+            this.button18.Location = new System.Drawing.Point(175, 6);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(76, 23);
+            this.button18.TabIndex = 40;
+            this.button18.Text = "Get Info";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
-            // dataGridViewTextBoxColumn3
+            // M4SaveButton
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "New Animation";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Animations";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Weapon";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // M4Button
-            // 
-            this.M4Button.Location = new System.Drawing.Point(257, 6);
-            this.M4Button.Name = "M4Button";
-            this.M4Button.Size = new System.Drawing.Size(95, 23);
-            this.M4Button.TabIndex = 36;
-            this.M4Button.Text = "Select M4";
-            this.M4Button.UseVisualStyleBackColor = true;
-            this.M4Button.Visible = false;
-            this.M4Button.Click += new System.EventHandler(this.M4Button_Click);
+            this.M4SaveButton.Location = new System.Drawing.Point(6, 513);
+            this.M4SaveButton.Name = "M4SaveButton";
+            this.M4SaveButton.Size = new System.Drawing.Size(149, 31);
+            this.M4SaveButton.TabIndex = 38;
+            this.M4SaveButton.Text = "Save M4 Changes";
+            this.M4SaveButton.UseVisualStyleBackColor = true;
+            this.M4SaveButton.Visible = false;
+            this.M4SaveButton.Click += new System.EventHandler(this.M4SaveButton_Click);
             // 
             // comboBox2
             // 
@@ -474,25 +421,47 @@
             this.comboBox2.Size = new System.Drawing.Size(163, 21);
             this.comboBox2.TabIndex = 37;
             // 
-            // M4SaveButton
+            // M4Button
             // 
-            this.M4SaveButton.Location = new System.Drawing.Point(6, 513);
-            this.M4SaveButton.Name = "M4SaveButton";
-            this.M4SaveButton.Size = new System.Drawing.Size(149, 31);
-            this.M4SaveButton.TabIndex = 38;
-            this.M4SaveButton.Text = "Save M4 Changes";
-            this.M4SaveButton.UseVisualStyleBackColor = true;
-            this.M4SaveButton.Visible = false;
+            this.M4Button.Location = new System.Drawing.Point(257, 6);
+            this.M4Button.Name = "M4Button";
+            this.M4Button.Size = new System.Drawing.Size(95, 23);
+            this.M4Button.TabIndex = 36;
+            this.M4Button.Text = "Select M4";
+            this.M4Button.UseVisualStyleBackColor = true;
+            this.M4Button.Visible = false;
+            this.M4Button.Click += new System.EventHandler(this.M4Button_Click);
             // 
-            // button18
+            // dataGridView2
             // 
-            this.button18.Location = new System.Drawing.Point(175, 6);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(76, 23);
-            this.button18.TabIndex = 40;
-            this.button18.Text = "Get Info";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView2.Location = new System.Drawing.Point(6, 35);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(550, 472);
+            this.dataGridView2.TabIndex = 35;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Weapon";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Animations";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "New Animation";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // Snipers
             // 
@@ -515,48 +484,92 @@
             this.Snipers.Text = "Snipers";
             this.Snipers.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // button12
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.NewAnimation});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(550, 472);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.button12.Location = new System.Drawing.Point(6, 513);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(149, 31);
+            this.button12.TabIndex = 34;
+            this.button12.Text = "Save WA2000 Changes";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // NewAnimation
+            // button11
             // 
-            this.NewAnimation.HeaderText = "New Animation";
-            this.NewAnimation.Name = "NewAnimation";
-            this.NewAnimation.Width = 200;
+            this.button11.Location = new System.Drawing.Point(257, 6);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(95, 23);
+            this.button11.TabIndex = 33;
+            this.button11.Text = "Select WA2000";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Visible = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // Column2
+            // button10
             // 
-            this.Column2.HeaderText = "Animations";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 200;
+            this.button10.Location = new System.Drawing.Point(6, 513);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(149, 31);
+            this.button10.TabIndex = 32;
+            this.button10.Text = "Save M21 Changes";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // Column1
+            // button9
             // 
-            this.Column1.HeaderText = "Weapon";
-            this.Column1.Name = "Column1";
+            this.button9.Location = new System.Drawing.Point(257, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(95, 23);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "Select M21";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button1
+            // button8
             // 
-            this.button1.Location = new System.Drawing.Point(257, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Select Cheytac";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button8.Location = new System.Drawing.Point(257, 6);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(95, 23);
+            this.button8.TabIndex = 30;
+            this.button8.Text = "Select Barrett";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(175, 6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(76, 23);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "Get Info";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 513);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 31);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Save Barrett Changes";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 513);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 31);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Save Cheytac Changes";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // comboBox1
             // 
@@ -571,92 +584,48 @@
             this.comboBox1.Size = new System.Drawing.Size(163, 21);
             this.comboBox1.TabIndex = 23;
             // 
-            // button2
+            // button1
             // 
-            this.button2.Location = new System.Drawing.Point(6, 513);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 31);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Save Cheytac Changes";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button1.Location = new System.Drawing.Point(257, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Select Cheytac";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button3
+            // dataGridView1
             // 
-            this.button3.Location = new System.Drawing.Point(6, 513);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 31);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Save Barrett Changes";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.NewAnimation});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 35);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(550, 472);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button7
+            // Column1
             // 
-            this.button7.Location = new System.Drawing.Point(175, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(76, 23);
-            this.button7.TabIndex = 29;
-            this.button7.Text = "Get Info";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.Column1.HeaderText = "Weapon";
+            this.Column1.Name = "Column1";
             // 
-            // button8
+            // Column2
             // 
-            this.button8.Location = new System.Drawing.Point(257, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(95, 23);
-            this.button8.TabIndex = 30;
-            this.button8.Text = "Select Barrett";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            this.Column2.HeaderText = "Animations";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 200;
             // 
-            // button9
+            // NewAnimation
             // 
-            this.button9.Location = new System.Drawing.Point(257, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(95, 23);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "Select M21";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(6, 513);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(149, 31);
-            this.button10.TabIndex = 32;
-            this.button10.Text = "Save M21 Changes";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Visible = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(257, 6);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(95, 23);
-            this.button11.TabIndex = 33;
-            this.button11.Text = "Select WA2000";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Visible = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(6, 513);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(149, 31);
-            this.button12.TabIndex = 34;
-            this.button12.Text = "Save WA2000 Changes";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Visible = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.NewAnimation.HeaderText = "New Animation";
+            this.NewAnimation.Name = "NewAnimation";
+            this.NewAnimation.Width = 200;
             // 
             // tabControl1
             // 
@@ -878,6 +847,16 @@
             this.M4Panel.TabIndex = 23;
             this.M4Panel.Visible = false;
             // 
+            // checkBox22
+            // 
+            this.checkBox22.AutoSize = true;
+            this.checkBox22.Location = new System.Drawing.Point(32, 138);
+            this.checkBox22.Name = "checkBox22";
+            this.checkBox22.Size = new System.Drawing.Size(92, 17);
+            this.checkBox22.TabIndex = 6;
+            this.checkBox22.Text = "Always E-Nac";
+            this.checkBox22.UseVisualStyleBackColor = true;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -926,22 +905,50 @@
             this.checkBox21.Text = "Always Nac";
             this.checkBox21.UseVisualStyleBackColor = true;
             // 
-            // checkBox22
+            // button13
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(32, 138);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(92, 17);
-            this.checkBox22.TabIndex = 6;
-            this.checkBox22.Text = "Always E-Nac";
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(22, 12);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(200, 23);
+            this.button13.TabIndex = 22;
+            this.button13.Text = "Open Misc Panel";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::EssenseTU6.Properties.Resources.weiland;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 388);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(940, 5);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(51, 23);
+            this.button14.TabIndex = 24;
+            this.button14.Text = "Errors?";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1003, 600);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.M4Panel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -949,14 +956,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MiscPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
             this.ShowIcon = false;
             this.Text = "Essence TU6";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MiscPanel.ResumeLayout(false);
+            this.MiscPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ARs.ResumeLayout(false);
@@ -972,15 +978,15 @@
             this.panel5.PerformLayout();
             this.M4Panel.ResumeLayout(false);
             this.M4Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MiscPanel;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label7;
@@ -996,7 +1002,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
@@ -1054,5 +1059,7 @@
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.CheckBox checkBox20;
         private System.Windows.Forms.CheckBox checkBox21;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
     }
 }
