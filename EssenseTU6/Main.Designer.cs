@@ -104,6 +104,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button14 = new System.Windows.Forms.Button();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.MiscPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.ARs.SuspendLayout();
@@ -122,6 +123,7 @@
             // 
             this.MiscPanel.AllowDrop = true;
             this.MiscPanel.BackColor = System.Drawing.Color.LightGray;
+            this.MiscPanel.Controls.Add(this.checkBox12);
             this.MiscPanel.Controls.Add(this.button6);
             this.MiscPanel.Controls.Add(this.textBox4);
             this.MiscPanel.Controls.Add(this.label10);
@@ -920,7 +922,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::EssenseTU6.Properties.Resources.weiland;
+            this.pictureBox1.Image = global::EssenseTU6.Properties.Resources.avatarscholar_reasonably_small;
             this.pictureBox1.Location = new System.Drawing.Point(12, 388);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(222, 200);
@@ -940,6 +942,17 @@
             this.button14.Text = "Errors?";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(9, 132);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(123, 17);
+            this.checkBox12.TabIndex = 22;
+            this.checkBox12.Text = "Wireframe Weapons";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged_1);
             // 
             // Main
             // 
@@ -1061,5 +1074,6 @@
         private System.Windows.Forms.CheckBox checkBox21;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.CheckBox checkBox12;
     }
 }

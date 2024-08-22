@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -199,16 +200,7 @@ namespace EssenseTU6
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox12.Checked && jtag2.Connect(out jtag2))
-            {
-                jtag2.SetMemory(0xC8CB92D4, Encoding.ASCII.GetBytes("viewmodel_knifethrow_hold" + "\0"));
-                MessageBox.Show("AA12 Always Nac Set");
-            }
-            else
-            {
-                jtag2.SetMemory(0xC8CB92D4, Encoding.ASCII.GetBytes("viewmodel_aa12_putaway" + "\0"));
-                MessageBox.Show("AA12 Always Nac Reset");
-            }
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1419,6 +1411,94 @@ namespace EssenseTU6
         private void button14_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://pastebin.com/FmTKgsDN");
+        }
+
+        public bool cellrender = false;
+        
+        private void checkBox12_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if(!jtag2.Connect(out jtag2))
+            {
+                MessageBox.Show("Connection to Xbox Failed");
+            }
+            {
+                if (!this.cellrender && jtag2.Connect(out jtag2) && checkBox12.Checked)
+                {
+                    this.cellrender = true;
+                    JRPC.SetMemory(this.jtag2, 3365077328U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3362805512U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3368224880U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3340482352U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3339261072U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3352018768U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3351553808U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    JRPC.SetMemory(this.jtag2, 3340646432U, new byte[1]
+                    {
+          byte.MaxValue
+                    });
+                    MessageBox.Show("Cell Render Weapons - Enabled");
+                    }
+                    else
+                    {
+                    this.cellrender = false;
+                    JRPC.SetMemory(this.jtag2, 3365077328U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3362805512U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3368224880U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3340482352U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3339261072U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3352018768U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3351553808U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    JRPC.SetMemory(this.jtag2, 3340646432U, new byte[1]
+                    {
+          (byte) 88
+                    });
+                    MessageBox.Show("Cell Render Weapons - Enabled");
+                }
+                              
+            }
+            
         }
     }
     

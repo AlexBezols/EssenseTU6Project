@@ -63,6 +63,16 @@ namespace EssenseTU6.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avatarscholar_reasonably_small {
+            get {
+                object obj = ResourceManager.GetObject("avatarscholar_reasonably_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FvJhFn2X0AgC_Su {
             get {
                 object obj = ResourceManager.GetObject("FvJhFn2X0AgC_Su", resourceCulture);
